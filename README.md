@@ -7,7 +7,8 @@ Transformar CSVs em one hot encoding
 
 
 ### O que foi feito:
-Adicionado no data frame uma coluna para vitoria ou derrota
+Adicionada coluna para vitoria ou derrota (empate considerado como vitoria para os amigos)
+Retiradas pontuacoes
 
 ### Anotações:
 Empate na linha 17

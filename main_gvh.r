@@ -14,3 +14,6 @@ for (i in 1:nrow(df)) {
 }
 
 df <- cbind(df, res)
+
+df <- df[,-c(2,3)]
+
