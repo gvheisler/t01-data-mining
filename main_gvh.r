@@ -14,3 +14,5 @@ for (i in 1:nrow(df)) {
 }
 
 df <- cbind(df, res)
+
+df1 <- read.csv("C:\Users\gvheisler\Desktop\data-mining\t01-data-mining\ds")

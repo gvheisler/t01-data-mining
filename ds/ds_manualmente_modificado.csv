@@ -1,0 +1,154 @@
+partida,jogadores,oponentes,amigos
+1,steeve, francois, alonso,32,6
+2,alonso, francois, jimmy,28,9
+3,jimmy, rick, yuriko,12,34
+4,jimmy, yuriko, barbara,6,36
+5,barbara, francois, steeve,36,4
+6,shelda, rick, yuriko,15,36
+7,francois, jimmy, yuriko,3,27
+8,steeve, jimmy, francois,10,61
+9,francois, yuriko, barbara,34,10
+10,francois, barbara, yuriko,10,5
+11,barbara, francois, steeve,34,25
+12,francois, rick, yuriko,16,59
+13,steeve, yuriko, rick,38,7
+14,barbara, francois, yuriko,19,12
+15,jimmy, barbara, rick,6,32
+16,barbara, francois, yuriko,58,55
+17,steeve, barbara, rick,21,21
+18,barbara, francois, yuriko,27,21
+19,jimmy, shelda, steeve,23,14
+20,jimmy, yuriko, francois,35,18
+21,shelda, steeve, francois,19,36
+22,jimmy, rick, barbara,17,27
+23,jimmy, yuriko, rick,23,14
+24,yuriko, barbara, alonso,11,41
+25,jimmy, yuriko, francois,16,62
+26,jimmy, rick, steeve,30,4
+27,steeve, barbara, rick,27,12
+28,jimmy, yuriko,10,29
+29,shelda, rick, steeve,36,6
+30,steeve, barbara, yuriko,5,58
+31,jimmy, rick, barbara,26,2
+32,jimmy, shelda, francois,8,57
+33,shelda, rick, steeve,34,12
+34,yuriko, barbara, rick,21,28
+35,jimmy, yuriko, rick,27,7
+36,shelda, steeve, francois,24,0
+37,jimmy, rick, ana,4,29
+38,jimmy, yuriko, steeve,28,13
+39,yuriko, barbara,21,56
+40,jimmy, yuriko,3,59
+41,yuriko, barbara, alonso,37,12
+42,jimmy, yuriko, francois,3,48
+43,jimmy, rick, steeve,6,30
+44,steeve, barbara, rick,29,13
+45,jimmy, yuriko,18,59
+46,shelda, rick, steeve,24,22
+47,steeve, barbara, yuriko,31,21
+48,jimmy, rick, barbara,28,10
+49,jimmy, shelda, francois,24,22
+50,shelda, rick, steeve,10,36
+51,yuriko, barbara, rick,38,21
+52,jimmy, yuriko, rick,9,30
+53,shelda, steeve, francois,36,11
+54,jimmy, rick, ana,20,19
+55,jimmy, yuriko, steeve,17,50
+56,shelda, rick,27,11
+57, steeve, barbara, yuriko,16,25
+58,jimmy, rick, francois,1,44
+59,jimmy, shelda,34,18
+60,shelda, rick,48,16
+61,yuriko, barbara,10,27
+62,jimmy, yuriko,47,21
+63,shelda, rick,14,33
+64,francois, jimmy,45,2
+65,steeve, jimmy,39,6
+66,francois, yuriko,42,16
+67,francois, barbara, alonso,42,13
+68, barbara, francois,26,8
+69, francois, rick,22,13
+70, francois, jimmy, yuriko,15,46
+71, steeve, jimmy, francois,12,36
+72, francois, yuriko, barbara,44,3
+73, francois, barbara, yuriko,34,13
+74, barbara, francois, steeve,39,10
+75, francois, rick, yuriko,5,36
+76, steeve, yuriko, rick,10,22
+77, barbara, francois,45,24
+78, jimmy, barbara, rick,49,0
+79,barbara, francois, yuriko,23,6
+80,jimmy, yuriko,7,31
+81,shelda, rick,2,43
+82,francois, jimmy,25,18
+83,steeve, jimmy,15,51
+84,francois, yuriko,21,25
+85,francois, barbara,28,21
+86,barbara, francois,45,21
+87,francois, rick,1,35
+88,jimmy, yuriko,11,29
+89,barbara, francois,17,31
+90,shelda, rick,40,20
+91,francois, jimmy, alonso,24,13
+92,steeve, jimmy,30,6
+93,francois, yuriko,29,3
+94,francois, barbara,25,8
+95,barbara, francois,34,10
+96,francois, rick,14,42
+97,steeve, yuriko,2,22
+98,barbara, francois,50,23
+99,jimmy, barbara,30,11
+100,barbara, francois,22,10
+101,steeve, barbara,55,44
+102,barbara, francois,40,16
+103,jimmy, shelda,34,13
+104,jimmy, yuriko,18,25
+105,shelda, steeve,8,31
+106,jimmy, rick,24,8
+107,jimmy, yuriko,13,29
+108,yuriko, barbara,14,27
+109,jimmy, yuriko,9,23
+110,barbara, francois,26,0
+111,shelda, rick,20,33
+112,francois, jimmy, alonso,14,31
+113,steeve, jimmy,10,31
+114,francois, yuriko,50,11
+115,francois, barbara,30,5
+116,barbara, francois, yuriko,5,25
+117,francois, rick, steeve,51,6
+118,steeve, yuriko, rick,21,27
+119,barbara, francois, shelda,51,2
+120,jimmy, barbara, shelda,37,17
+121,barbara, francois, shelda,15,26
+122,steeve, barbara, yuriko,40,37
+123,barbara, francois, shelda,16,35
+124,jimmy, shelda, ana,6,25
+125,jimmy, yuriko,45,11
+126,shelda, steeve ,30,7
+127,jimmy, rick,1,35
+128,jimmy, yuriko,35,20
+129,yuriko, barbara,42,4
+130,jimmy, yuriko ,6,35
+131,barbara, francois,9,45
+132,shelda, rick, alonso,23,6
+133,francois, jimmy,33,4
+134,steeve, jimmy,8,44
+135,francois, yuriko,33,32
+136,francois, barbara,24,9
+137,barbara, francois,20,31
+138,francois, rick,18,24
+139,steeve, yuriko ,0,24
+140,barbara, francois, shelda,21,30
+141,steeve, barbara ,22,9
+142,barbara, francois , shelda,22,17
+143,jimmy, shelda, ana,41,12
+144,jimmy, yuriko, alonso,12,41
+145,shelda, steeve ,32,4
+146,jimmy, yuriko,5,35
+147,shelda, steeve,36,10
+148,jimmy, rick, alonso,2,29
+149,jimmy, yuriko, alonso,31,13
+150,yuriko, barbara  ,18,27
+151,yuriko, barbara ,10,13
+152,rick, barbara,9,22
+153,yuriko, rick,29,39
