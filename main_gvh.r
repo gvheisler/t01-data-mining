@@ -82,9 +82,6 @@ for (j in 1:ncol(ndf)) {
   ndf[,j] <- as.factor(ndf[,j])
 }
 
-factor(ndf[,1])
-
-
 ####
 #criacao de regras e subset
 ####
