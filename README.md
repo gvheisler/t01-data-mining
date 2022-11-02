@@ -43,3 +43,23 @@ Se tem 2 nomes, dfNomes fica com NA na terceira coluna
 
 ### Anotações:
 Empate na linha 17 (atualmente tratado como vitoria)
+
+
+### "Conclusões" até aqui:
+
+##### Melhor jogador individual: yuriko
+
+##### Melhor dupla: jimmy e yuriko
+
+#### Pior jogador: barbara
+
+##### Pior dupla: barbara e francois
+
+
+
+| lhs                     | -> | rhs      | support   | confidence | coverage  | lift      |
+|-------------------------|----|----------|-----------|------------|-----------|-----------|
+| {yuriko=1}              | -> | {res=1}  | 0.2483660 | 0.5937500  | 0.4183007 | 1.297768  |
+| {jimmy=1, yuriko=1}     | -> | {res=1}  | 0.1241830 | 0.7037037  | 0.1764706 | 1.538095  |
+| {barbara=1}             | -> | {res=0}  | 0.2614379 | 0.6557377  | 0.3986928 | 1.2087695 |
+| {barbara=1, francois=1} | -> | {res=0}  | 0.1699346 | 0.7878788  | 0.2156863 | 1.4523549 |

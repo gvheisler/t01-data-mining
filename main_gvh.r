@@ -88,12 +88,11 @@ factor(ndf[,1])
 ####
 #criacao de regras e subset
 ####
-regras <- apriori(ndf, parameter = list(conf = 0.5, supp = 0.1, target = 'rules', minlen = 3))
-dfRegras <- as(regras, "data.frame")
+regras <- apriori(ndf, parameter = list(conf = 0.5, supp = 0.1, target = 'rules', minlen = 2, maxlen = 2))
+regras <- sort(regras, by = 'confidence')
 inspect(regras, ruleSep = '->', itemSep = '&')
 
 subc <- subset(regras, (rhs %in% 'res=1'))
 subc <- sort(subc, by = 'confidence')
 inspect(subc)
-dfRegrasSubc <- as(subc, "data.frame")
 
