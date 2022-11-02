@@ -17,3 +17,13 @@ df <- cbind(df, res)
 
 df <- df[,-c(2,3)]
 
+nomes <- df[,1]
+
+dfNomes <- data.frame()
+
+for (i in 1:length(nomes)) {
+  dfNomes <- rbind(dfNomes, (unlist(strsplit(nomes[i], ','))))
+}
+warnings()
+
+                 
