@@ -27,7 +27,7 @@ Ordenar as regras e analisar elas
 * Adicionada coluna para vitoria ou derrota [1,0]
 * As pontuações foram retiradas
 
-##### Criado dfNomes, que contém todos os nomes (cada partida uma linha)
+##### Criação do dfNomes, que contém todos os nomes (cada partida uma linha)
 * Separação de todas strings de nomes
 * Nomes -> tudo em minusculo
 * ç transformado em c
