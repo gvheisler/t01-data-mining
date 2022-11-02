@@ -2,6 +2,8 @@
 df <- rbind(read.csv(url("http://www-usr.inf.ufsm.br/~joaquim/UFSM/DM/ds/_ASSOC_BGFriends_01.csv")), 
             read.csv(url("http://www-usr.inf.ufsm.br/~joaquim/UFSM/DM/ds/_ASSOC_BGFriends_02.csv")))
 
+library('arules')
+
 df <- df[,-1]
 
 res <- vector("numeric")
@@ -25,23 +27,19 @@ for (i in 1:length(nomes)) {
   nm <- unlist(strsplit(nomes[i], ','))
   nm <- tolower(nm)
   nm <- gsub(" ", '', nm)
+  nm <- gsub("ç", 'c', nm)
+  nm <- gsub("<e7>", 'c', nm)
   dfNomes <- rbind(dfNomes, nm)
   if(length(nm)==2){
     dfNomes[i,3]=NA
   }
 }
 
-
-
 unicos <- sort(unique(unlist(dfNomes)))
-
-print(unicos)
 
 ndf <- data.frame(matrix(ncol = length(unicos), nrow = nrow(dfNomes)))
 
 colnames(ndf) <- unicos
-
-print(ndf)
 
 for (i in 1:nrow(ndf)){
   for(j in 1:ncol(ndf)){
@@ -52,9 +50,26 @@ for (i in 1:nrow(ndf)){
 for (indice in unicos) {
   for (i in 1:nrow(dfNomes)){
     for(j in 1:ncol(dfNomes)){
-      if(dfNomes[i,j]==indice){
-        ndf[i, indice] <- 1
+      if(!is.na(dfNomes[i,j])){
+        if(dfNomes[i,j]==indice){
+          ndf[i, indice] <- 1
+        }
       }
     }
   }
 }
+
+ndf <- cbind(ndf, res)
+
+for (i in 1:ncol(ndf)) {
+  ndf[,i] <- as.factor(ndf[,i])
+}
+
+
+regras <- apriori(ndf, parameter = list(conf = 0.2, supp = 0.1, target = 'rules', minlen = 3))
+
+inspect(regras, ruleSep = '->', itemSep = '&')
+
+subc <- subset(regras, rhs %in% 'res=0')
+
+inspect(subc, ruleSep = '->', itemSep = '&')
