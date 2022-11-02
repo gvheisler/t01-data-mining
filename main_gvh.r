@@ -23,15 +23,19 @@ nomes <- df[,1]
 
 dfNomes <- data.frame()
 
+i = 28
+
 for (i in 1:length(nomes)) {
   nm <- unlist(strsplit(nomes[i], ','))
   nm <- tolower(nm)
   nm <- gsub(" ", '', nm)
   nm <- gsub("ç", 'c', nm)
   nm <- gsub("<e7>", 'c', nm)
-  dfNomes <- rbind(dfNomes, nm)
-  if(length(nm)==2){
-    dfNomes[i,3]=NA
+  if(length(nm)==3){
+    dfNomes <- rbind(dfNomes, nm)
+  }else if(length(nm)==2){
+    nm[[3]]=NA
+    dfNomes <- rbind(dfNomes, nm)
   }
 }
 
