@@ -6,7 +6,9 @@
 
 ### O que fazer:
 Transformar CSVs em one hot encoding
+
 Aplicar o apriori e gerar as regras
+
 Ordenar as regras e analisar elas
 
 
@@ -31,8 +33,10 @@ Ordenar as regras e analisar elas
 * Separação de todas strings de nomes
 * Nomes -> tudo em minusculo
 * ç transformado em c
-* <e7> transformado em c (letra bugada mas era um ç no csv)
+* < e7 > transformado em c (letra bugada mas era um ç no csv)
+
 Se tem 3 nomes, dfNomes fica com a linha cheia
+
 Se tem 2 nomes, dfNomes fica com NA na terceira coluna
 
 ##### Criação do One-hot-encoding
