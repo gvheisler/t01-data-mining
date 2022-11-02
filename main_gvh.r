@@ -24,11 +24,13 @@ dfNomes <- data.frame()
 for (i in 1:length(nomes)) {
   nm <- unlist(strsplit(nomes[i], ','))
   nm <- tolower(nm)
+  nm <- gsub(" ", '', nm)
   dfNomes <- rbind(dfNomes, nm)
   if(length(nm)==2){
     dfNomes[i,3]=NA
   }
 }
+
 
 
 unicos <- sort(unique(unlist(dfNomes)))
