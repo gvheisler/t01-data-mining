@@ -4,8 +4,14 @@ df <- rbind(read.csv(url("http://www-usr.inf.ufsm.br/~joaquim/UFSM/DM/ds/_ASSOC_
 
 library('arules')
 
+####
+#exclusao da coluna de numero da partida
+####
 df <- df[,-1]
 
+####
+#criacao da coluna de vitoria/derrota
+####
 res <- vector("numeric")
 for (i in 1:nrow(df)) {
   if(df[i,]$Oponentes>df[i,]$Amigos){
@@ -15,16 +21,19 @@ for (i in 1:nrow(df)) {
   }
 }
 
+####
+#adicionando coluna de resultados no df e retirando as coulas de pontos
+####
 df <- cbind(df, res)
-
 df <- df[,-c(2,3)]
 
+
+
+####
+#tratamento da coluna de nomes, separando em um novo df
+####
 nomes <- df[,1]
-
 dfNomes <- data.frame()
-
-i = 28
-
 for (i in 1:length(nomes)) {
   nm <- unlist(strsplit(nomes[i], ','))
   nm <- tolower(nm)
@@ -39,6 +48,10 @@ for (i in 1:length(nomes)) {
   }
 }
 
+
+####
+#Criação one-hot-encoding
+####
 unicos <- sort(unique(unlist(dfNomes)))
 
 ndf <- data.frame(matrix(ncol = length(unicos), nrow = nrow(dfNomes)))
@@ -65,15 +78,22 @@ for (indice in unicos) {
 
 ndf <- cbind(ndf, res)
 
-for (i in 1:ncol(ndf)) {
-  ndf[,i] <- as.factor(ndf[,i])
+for (j in 1:ncol(ndf)) {
+  ndf[,j] <- as.factor(ndf[,j])
 }
 
+factor(ndf[,1])
 
-regras <- apriori(ndf, parameter = list(conf = 0.2, supp = 0.1, target = 'rules', minlen = 3))
 
+####
+#criacao de regras e subset
+####
+regras <- apriori(ndf, parameter = list(conf = 0.5, supp = 0.1, target = 'rules', minlen = 3))
+dfRegras <- as(regras, "data.frame")
 inspect(regras, ruleSep = '->', itemSep = '&')
 
-subc <- subset(regras, rhs %in% 'res=0')
+subc <- subset(regras, (rhs %in% 'res=1'))
+subc <- sort(subc, by = 'confidence')
+inspect(subc)
+dfRegrasSubc <- as(subc, "data.frame")
 
-inspect(subc, ruleSep = '->', itemSep = '&')
