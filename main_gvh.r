@@ -22,8 +22,37 @@ nomes <- df[,1]
 dfNomes <- data.frame()
 
 for (i in 1:length(nomes)) {
-  dfNomes <- rbind(dfNomes, (unlist(strsplit(nomes[i], ','))))
+  nm <- unlist(strsplit(nomes[i], ','))
+  nm <- tolower(nm)
+  dfNomes <- rbind(dfNomes, nm)
+  if(length(nm)==2){
+    dfNomes[i,3]=NA
+  }
 }
-warnings()
 
-                 
+
+unicos <- sort(unique(unlist(dfNomes)))
+
+print(unicos)
+
+ndf <- data.frame(matrix(ncol = length(unicos), nrow = nrow(dfNomes)))
+
+colnames(ndf) <- unicos
+
+print(ndf)
+
+for (i in 1:nrow(ndf)){
+  for(j in 1:ncol(ndf)){
+    ndf[i, j] <- 0
+  }
+}
+
+for (indice in unicos) {
+  for (i in 1:nrow(dfNomes)){
+    for(j in 1:ncol(dfNomes)){
+      if(dfNomes[i,j]==indice){
+        ndf[i, indice] <- 1
+      }
+    }
+  }
+}
