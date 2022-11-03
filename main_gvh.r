@@ -52,10 +52,10 @@ for (i in 1:length(nomes)) {
 ####
 #Criação one-hot-encoding
 ####
+
 unicos <- sort(unique(unlist(dfNomes)))
-
-ndf <- data.frame(matrix(ncol = length(unicos), nrow = nrow(dfNomes)))
-
+ndf <- data.frame(matrix(ncol = length(unicos),
+                         nrow = nrow(dfNomes)))
 colnames(ndf) <- unicos
 
 for (i in 1:nrow(ndf)){
@@ -85,7 +85,8 @@ for (j in 1:ncol(ndf)) {
 ####
 #criacao de regras e subset
 ####
-regras <- apriori(ndf, parameter = list(conf = 0.5, supp = 0.1, target = 'rules', minlen = 2, maxlen = 2))
+regras <- apriori(ndf, parameter = list(conf = 0.5, supp = 0.1, 
+                     target = 'rules', minlen = 2, maxlen = 2))
 regras <- sort(regras, by = 'confidence')
 inspect(regras, ruleSep = '->', itemSep = '&')
 
