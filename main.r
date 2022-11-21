@@ -16,8 +16,10 @@ res <- vector("numeric")
 for (i in 1:nrow(df)) {
   if(df[i,]$Oponentes>df[i,]$Amigos){
     res <- c(res, 0)
-  }else{
+  }else if(df[i,]$Oponentes<df[i,]$Amigos){
     res <- c(res, 1)
+  }else{
+    res <- c(res, 2)
   }
 }
 
@@ -27,7 +29,8 @@ for (i in 1:nrow(df)) {
 df <- cbind(df, res)
 df <- df[,-c(2,3)]
 
-
+df <- df[-which(df$res==2),]
+res <- res[-which(res==2)]
 
 ####
 #tratamento da coluna de nomes, separando em um novo df
@@ -86,11 +89,11 @@ for (j in 1:ncol(ndf)) {
 #criacao de regras e subset
 ####
 regras <- apriori(ndf, parameter = list(conf = 0.5, supp = 0.1, 
-                     target = 'rules', minlen = 2, maxlen = 2))
+                     target = 'rules', minlen = 3, maxlen = 3))
 regras <- sort(regras, by = 'confidence')
 inspect(regras, ruleSep = '->', itemSep = '&')
 
-subc <- subset(regras, (rhs %in% 'res=1'))
+subc <- subset(regras, (rhs %in% 'res=0'))
 subc <- sort(subc, by = 'confidence')
 inspect(subc)
 
