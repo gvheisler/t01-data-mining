@@ -54,6 +54,7 @@ for (i in 1:length(nomes)) {
   }
 }
 
+write.csv(cbind(dfNomes, res), "C:\\Users\\gvheisler\\Desktop\\data-mining\\teste.csv")
 
 ####
 #Criação one-hot-encoding
