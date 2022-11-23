@@ -2,7 +2,6 @@
 
 ## Assunto: Associação
 
-### [Documento no overleaf](https://www.overleaf.com/5131289339zkcqdtmyxnqw)
 
 ### O que fazer:
 Transformar CSVs em one hot encoding
@@ -21,12 +20,12 @@ Ordenar as regras e analisar elas
 
 ~~~R
   ndf     # dataframe one hot encoding
-  dfNomes # dataframe com todos nomes (partidas apenas com dois amigos a terceira coluna é NA)
+  dfNomes # dataframe com todos nomes (em partidas apenas com dois amigos a terceira coluna é NA)
   regras  # regras de associação
 ~~~
 
 ### Etapas feitas
-* Adicionada coluna para vitoria ou derrota [1,0]
+* Adicionada coluna para vitoria ou derrota [1 ou 0]
 * As pontuações foram retiradas
 
 ##### Criação do dfNomes, que contém todos os nomes (cada partida uma linha)
@@ -42,16 +41,16 @@ Se tem 2 nomes, dfNomes fica com NA na terceira coluna
 ##### Criação do One-hot-encoding
 
 ### Anotações:
-Empate na linha 17 (atualmente tratado como vitoria)
+Empate na linha 17 (descartado)
 
 
-### "Conclusões" até aqui:
+### Conclusões:
 
 ##### Melhor jogador individual: yuriko
 
 ##### Melhor dupla: jimmy e yuriko
 
-#### Pior jogador: barbara
+##### Pior jogador: barbara
 
 ##### Pior dupla: barbara e francois
 
@@ -59,6 +58,6 @@ Empate na linha 17 (atualmente tratado como vitoria)
 
 | lhs                     | -> | rhs      | support   | confidence | coverage  | lift      |
 |-------------------------|----|----------|-----------|------------|-----------|-----------|
-| {yuriko=1}              | -> | {res=1}  | 0.2483660 | 0.5937500  | 0.4183007 | 1.297768  |
-| {jimmy=1, yuriko=1}     | -> | {res=1}  | 0.1241830 | 0.7037037  | 0.1764706 | 1.538095  |
-| {barbara=1, francois=1} | -> | {res=0}  | 0.1699346 | 0.7878788  | 0.2156863 | 1.4523549 |
+| {yuriko=1}              | -> | {res=1}  | 0.2500000 | 0.5937500  | 0.4183007 | 1.297768  |
+| {jimmy=1, yuriko=1}     | -> | {res=1}  | 0.1250000 | 0.7037037  | 0.1764706 | 1.538095  |
+| {barbara=1, francois=1} | -> | {res=0}  | 0.1710526 | 0.7878788  | 0.2156863 | 1.4523549 |
