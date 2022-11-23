@@ -15,7 +15,7 @@ Ordenar as regras e analisar elas
 * Junção das tabelas
 * Transformação dos dados
 * Criação de dataframe no formato one-hot-encoding
-* Criação de regras de associação (porém com problemas)
+* Criação de regras de associação
 
 
 ~~~R
