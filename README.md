@@ -50,8 +50,6 @@ Empate na linha 17 (descartado)
 
 ##### Melhor dupla: jimmy e yuriko
 
-##### Pior jogador: barbara
-
 ##### Pior dupla: barbara e francois
 
 
